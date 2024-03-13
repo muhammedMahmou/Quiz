@@ -1,0 +1,91 @@
+<html>
+    <head>
+        <title>Quiz App</title>
+        <link rel="icon" type="image/x-icon" href="/images/icon-removebg-preview.png">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/styele.css">
+    </head>
+    <body>
+        <section id="settings" class="d-block ">
+            <div class="first">
+            <h1 class="style">Setting Your Quiz</h1>     
+            <div class="p-4">
+                <div class="form-group mb-1 mt-1 ">
+                    <label for="category" class="text-color">Category</label>
+                    <select id="category" class="form-control">
+                        <option value="9">General Knowledge</option>
+                        <option value="27">Animals</option>
+                        <option value="15">Video Games</option>
+                        <option value="23">History</option>
+                        <option value="21">Sports</option>
+                        <option value="18">Science : Computers</option>
+                    </select>
+                </div>
+                <div class="form-group mb-1 mt-1 ">
+                    <label for="difficulty" class="text-color">Difficulty</label>
+                   <div class="form-check "id="difficulty">
+                    <label for="form-check-label">
+                    <input type="radio" class="form-check-input" name="difficulty" id="easy" value="easy" name="difficulty" checked >
+                    Easy
+                </label>
+                   </div>
+                   <div class="form-check ">
+                    <label for="form-check-label">
+                    <input type="radio" class="form-check-input" name="difficulty" id="meduim" value="meduim" >
+                    Meduim
+                </label>
+                   </div> 
+                   <div class="form-check "id="difficulty">
+                    <label for="form-check-label">
+                    <input type="radio" class="form-check-input" name="difficulty" id="hard" value="hard" >
+                    Hard
+                </label>
+                   </div>
+                </div> 
+                <div class="form-group mb-1 ">
+                  <input type="number" class="form-control" id="number" placeholder="Number Of questions" required>
+                  <p class="alert mt-1 alert-danger d-none" id="alert">Write Number Of Questions</p>
+                </div> 
+                <button id="start" class="btn bg button">Start</button>
+            </div>
+        </div>
+        </section>
+        <section id="quiz" class="d-none">
+            <div class="first">
+                <div class="main">
+                    <h1>Quiz</h1>
+                <span class=" bg back">
+                    <span id="current">0</span>
+                    Of
+                    <span id="total">10</span>
+                    Questions
+                </span>    
+                <span id="correct" class="btn btn-success  mx-2 d-none">Correct</span>
+                <span id="Incorrect" class="btn btn-danger mx-2 d-none">InCorrect</span>
+                </div>
+              <div class="text-color p-5">
+                <h5 class="d-inline ">Q:</h5>
+                <h5 class="d-inline pb-2" id="question"></h5>
+                <div id="rowAnswer">
+                    
+                </div>
+                <p class="alert mt-1 alert-danger d-none" id="alert2">Please Choose Your Answer</p>
+                <button id="nextQuestion" class="btn bg button">Submit</button>
+                <button id="nextQuestion2" class="btn bg button d-none">Next</button>
+              </div>
+                </div>
+        </section>
+        <section id="finish" class="mt-5 d-none ">
+
+            <div class="bg-white w-50 m-auto shadow-lg rounded overflow-auto text-center">
+                <h1 class=" text-spec py-5 bg-light border-bottom">fininsh</h1>
+                <div class="p-4">
+                    <h5 class=" text-color">Score</h5>
+                    <h4 class=" text-color" id="score"></h4>
+                    <button class="btn float-right py-2 px-4 bg-spec rounded-pill text-white my-4" id="tryBtn">Try Again?</button>
+                </div>
+            </div>
+        </section>
+        <script type="module" src="js/main.js"></script>
+    </body>
+</html>
